@@ -1,0 +1,9 @@
+torch
+diffusers
+transformers
+sentencepiece
+accelerate
+google-genai
+Pillow
+protobuf
+peft
