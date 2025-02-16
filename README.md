@@ -43,14 +43,14 @@ You may need to setup Google Gemini API key to use the prompt enhancement featur
 
 
 ### 📦 Pretrained Models
-Download our pretrained models from [Google Drive](https://drive.google.com/file/d/1z6cR3PbqnrlVjXJJlk6AYxdl8z18hvtL/view?usp=sharing) and unzip. You should have the following files:
+Download our pretrained models from [Google Drive](https://drive.google.com/drive/folders/1VStt7J2whm5RRloa4NK1hGTHuS9WiTfO?usp=sharing) and unzip. You should have the following files:
 - `transformers`
     - `config.json`
     - `diffusion_pytorch_model.safetensors`
 - `pytorch_lora_weights.safetensors`
 <!-- 
 ### 🔧 Configuration
-Depends on where you store the data and checkpoints, you may need to change a few things in the configuration ```yaml``` file. We marked out the important lines you may want to take a look at in our exempler configurations files. -->
+-->
 
 ## 🏃 Inference
 To generate subject-preserving images, simply run:
@@ -67,9 +67,6 @@ CUDA_VISIBLE_DEVICES=0 python generate.py \
     --t_guidance 1.0 \                                          # True text guidance scale, set to >1.0 if you want to enhance the text conditioning
     # --disable_gemini_prompt \                                 # Disable Gemini prompt enhancement, not recommended unless you have a very detailed prompt
 ```
-
-
-
 
 ## Training
 TBD
