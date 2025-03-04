@@ -1,6 +1,6 @@
 # Diffusion Self-Distillation for Zero-Shot Customized Image Generation
 
-**arXiv 2024**
+**CVPR 2025**
 
 This repository represents the official implementation of the paper titled "Diffusion Self-Distillation for Zero-Shot Customized Image Generation".
 
@@ -8,7 +8,9 @@ This repository represents the official implementation of the paper titled "Diff
 
 [![Website](docs/badge-website.svg)](https://primecai.github.io/dsd/)
 [![Paper](https://img.shields.io/badge/arXiv-PDF-b31b1b)](https://arxiv.org/abs/2411.18616)
-[![Hugging Face Demo](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face%20-Demo-yellow)](https://huggingface.co/papers/2411.18616)
+[![HuggingFace Demo](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace%20-Demo-yellow)](https://huggingface.co/papers/2411.18616)
+[![HuggingFace Space](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace%20-Space-yellow)](https://huggingface.co/papers/2411.18616)
+[![Data](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace%20-Data-yellow)](https://huggingface.co/datasets/primecai/dsd_data)
 
 [Shengqu Cai](https://primecai.github.io/),
 [Eric Ryan Chan](https://ericryanchan.github.io/about.html),
@@ -79,7 +81,7 @@ Please cite our paper:
 @inproceedings{cai2024dsd,
     author={Cai, Shengqu and Chan, Eric Ryan and Zhang, Yunzhi and Guibas, Leonidas and Wu, Jiajun and Wetzstein, Gordon.},
     title={Diffusion Self-Distillation for Zero-Shot Customized Image Generation},
-    booktitle={arXiv},
-    year={2024}
+    booktitle={CVPR},
+    year={2025}
 }       
 ```

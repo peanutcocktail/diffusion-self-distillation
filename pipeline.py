@@ -27,7 +27,7 @@ from transformers import (
 from diffusers.image_processor import VaeImageProcessor
 from diffusers.loaders import SD3LoraLoaderMixin
 from diffusers.models.autoencoders import AutoencoderKL
-from diffusers.models.transformers import FluxTransformer2DModel
+# from diffusers.models.transformers import FluxTransformer2DModel
 from diffusers.schedulers import FlowMatchEulerDiscreteScheduler
 from diffusers.utils import (
     USE_PEFT_BACKEND,
@@ -40,6 +40,7 @@ from diffusers.utils import (
 from diffusers.utils.torch_utils import randn_tensor
 from diffusers.pipelines.pipeline_utils import DiffusionPipeline
 from recaption import enhance_prompt
+from transformer import FluxTransformer2DConditionalModel
 
 
 if is_torch_xla_available():
@@ -191,7 +192,7 @@ class FluxConditionalPipeline(DiffusionPipeline, SD3LoraLoaderMixin):
         tokenizer: CLIPTokenizer,
         text_encoder_2: T5EncoderModel,
         tokenizer_2: T5TokenizerFast,
-        transformer: FluxTransformer2DModel,
+        transformer: FluxTransformer2DConditionalModel,
     ):
         super().__init__()
 
