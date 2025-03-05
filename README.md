@@ -8,7 +8,7 @@ This repository represents the official implementation of the paper titled "Diff
 
 [![Website](docs/badge-website.svg)](https://primecai.github.io/dsd/)
 [![Paper](https://img.shields.io/badge/arXiv-PDF-b31b1b)](https://arxiv.org/abs/2411.18616)
-[![HuggingFace Demo](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace%20-Demo-yellow)](https://huggingface.co/papers/2411.18616)
+[![HuggingFace Demo](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace%20-Demo-yellow)](https://huggingface.co/spaces/primecai/diffusion-self-distillation)
 [![HuggingFace Space](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace%20-Space-yellow)](https://huggingface.co/papers/2411.18616)
 [![Data](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace%20-Data-yellow)](https://huggingface.co/datasets/primecai/dsd_data)
 
