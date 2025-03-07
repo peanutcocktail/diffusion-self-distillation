@@ -46,7 +46,7 @@ You may need to setup Google Gemini API key to use the prompt enhancement featur
 
 
 ### 📦 Pretrained Models
-Download our pretrained models from [Google Drive](https://drive.google.com/drive/folders/1VStt7J2whm5RRloa4NK1hGTHuS9WiTfO?usp=sharing) and unzip. You should have the following files:
+Download our pretrained models from [Hugging Face](https://huggingface.co/primecai/dsd_model) or [Google Drive](https://drive.google.com/drive/folders/1VStt7J2whm5RRloa4NK1hGTHuS9WiTfO?usp=sharing) and unzip. You should have the following files:
 - `transformers`
     - `config.json`
     - `diffusion_pytorch_model.safetensors`
