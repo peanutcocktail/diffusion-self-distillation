@@ -6,6 +6,10 @@ This repository represents the official implementation of the paper titled "Diff
 
 *This repository is still under construction, many updates will be applied in the near future.*
 
+*It currently supports the subject-preserving generation model, and the relighting model is under further alpha testing.*
+
+*The code requires >24GB GPU memory, a quantized version is under development to support <24GB GPU memory.*
+
 [![Website](docs/badge-website.svg)](https://primecai.github.io/dsd/)
 [![Paper](https://img.shields.io/badge/arXiv-PDF-b31b1b)](https://arxiv.org/abs/2411.18616)
 [![HuggingFace Demo](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace%20-Demo-yellow)](https://huggingface.co/spaces/primecai/diffusion-self-distillation)
@@ -73,6 +77,12 @@ CUDA_VISIBLE_DEVICES=0 python generate.py \
 
 ## Training
 TBD
+
+## Todo
+- [ ] Release the training code.
+- [ ] Release relighting model.
+- [ ] Model quantization to support <24 GB GPU memory.
+- [x] Release subject-preserving generation model.
 
 ## 🎓 Citation
 
