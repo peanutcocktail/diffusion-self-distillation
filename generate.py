@@ -5,6 +5,7 @@ from diffusers.utils import load_image
 
 from pipeline import FluxConditionalPipeline
 from transformer import FluxTransformer2DConditionalModel
+from recaption import enhance_prompt
 
 pipe = None
 
@@ -40,6 +41,9 @@ def process_image_and_text(image, text, gemini_prompt, guidance, i_guidance, t_g
     image = image.resize((512, 512))
 
     control_image = load_image(image)
+
+    if gemini_prompt:
+        text = enhance_prompt(image, text.strip().replace("\n", "").replace("\r", ""))
     
     result = pipe(
         prompt=text.strip().replace("\n", "").replace("\r", ""),

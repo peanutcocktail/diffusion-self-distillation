@@ -723,7 +723,7 @@ class FluxConditionalPipeline(DiffusionPipeline, SD3LoraLoaderMixin):
 
         device = self._execution_device
 
-        prompt = enhance_prompt(image, prompt)
+        # prompt = enhance_prompt(image, prompt)
         # if gemini_prompt:
         #     while True:
         #         try:
