@@ -843,7 +843,7 @@ class FluxConditionalPipeline(DiffusionPipeline, SD3LoraLoaderMixin):
 
                 # handle guidance
                 if self.transformer.config.guidance_embeds:
-                    guidance = torch.tensor([guidance_scale])
+                    guidance = torch.tensor([guidance_scale], device=device, dtype=torch.float32)
                     guidance = guidance.expand(latents.shape[0])
                 else:
                     guidance = None
