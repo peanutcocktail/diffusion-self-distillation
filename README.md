@@ -8,8 +8,6 @@ This repository represents the official implementation of the paper titled "Diff
 
 *It currently supports the subject-preserving generation model, and the relighting model is under further alpha testing.*
 
-*The code requires >24GB GPU memory, a quantized version is under development to support <24GB GPU memory.*
-
 ## ✅ What works well
 - Objects / Merchandise / Logos / Try-ons
 - Illustrations / Comics / Manga / Anime
@@ -18,6 +16,7 @@ This repository represents the official implementation of the paper titled "Diff
 ## ⚠️ Limitations
 
 - Photorealistic face identity: We did not train the model specifically for face identity, as many other dedicated models excel in this area.
+- Relighting/Structure-preserved generation: The model is under further alpha testing and will be released in the future.
 
 [![Website](docs/badge-website.svg)](https://primecai.github.io/dsd/)
 [![Paper](https://img.shields.io/badge/arXiv-PDF-b31b1b)](https://arxiv.org/abs/2411.18616)
