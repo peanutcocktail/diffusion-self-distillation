@@ -783,12 +783,10 @@ class FluxConditionalPipeline(DiffusionPipeline, SD3LoraLoaderMixin):
         assert isinstance(image, torch.Tensor)
         black_image = torch.full((1, 3, 512, 512), -1.0)
         image = torch.cat([image, black_image], dim=3)
-        latents_cond = self.vae.encode(image.to(dtype=self.vae.dtype)).latent_dist.sample()
+        latents_cond = self.vae.encode(image.to(dtype=self.vae.dtype).to(device)).latent_dist.sample()
         latents_cond = (
             latents_cond - self.vae.config.shift_factor
         ) * self.vae.config.scaling_factor
-        # from customization.utils import mask_random_quadrants
-        # latent_cond = mask_random_quadrants(latent_cond)
 
         # 4. Prepare latent variables
         num_channels_latents = self.transformer.config.in_channels // 4
@@ -833,11 +831,6 @@ class FluxConditionalPipeline(DiffusionPipeline, SD3LoraLoaderMixin):
             len(timesteps) - num_inference_steps * self.scheduler.order, 0
         )
         self._num_timesteps = len(timesteps)
-
-        # latents = latents.to(self.transformer.device)
-        # latent_image_ids = latent_image_ids.to(self.transformer.device)
-        # timesteps = timesteps.to(self.transformer.device)
-        # text_ids = text_ids.to(self.transformer.device)
 
         # 6. Denoising loop
         with self.progress_bar(total=num_inference_steps) as progress_bar:

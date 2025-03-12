@@ -120,6 +120,8 @@ def main():
         pipe.enable_model_cpu_offload()
     if args.sequential_offload:
         pipe.enable_sequential_cpu_offload()
+    if not args.model_offload and not args.sequential_offload:
+        pipe.to("cuda")
 
     # Open the image
     image = Image.open(args.image_path).convert("RGB")

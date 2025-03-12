@@ -18,7 +18,6 @@ This repository represents the official implementation of the paper titled "Diff
 ## ⚠️ Limitations
 
 - Photorealistic face identity: We did not train the model specifically for face identity, as many other dedicated models excel in this area.
-- Relighting: We will release a separate model specifically for relighting.
 
 [![Website](docs/badge-website.svg)](https://primecai.github.io/dsd/)
 [![Paper](https://img.shields.io/badge/arXiv-PDF-b31b1b)](https://arxiv.org/abs/2411.18616)
@@ -38,6 +37,11 @@ Text-to-image diffusion models produce impressive results but are frustrating to
 
 ![teaser](docs/teaser.jpg)
 
+## 🔌 Community Integrations
+
+### ComfyUI
+
+- [ComfyUI-DSD](https://github.com/irreveloper/ComfyUI-DSD): An unofficial ComfyUI custom node package that integrates Diffusion Self-Distillation for subject-driven generation in the ComfyUI environment.
 
 ## 🛠️ Setup
 
@@ -82,8 +86,11 @@ CUDA_VISIBLE_DEVICES=0 python generate.py \
     --guidance 3.5 \                                            # Guidance scale
     --i_guidance 1.0 \                                          # True image guidance scale, set to >1.0 if you want to enhance the image conditioning
     --t_guidance 1.0 \                                          # True text guidance scale, set to >1.0 if you want to enhance the text conditioning
+    --model_offload \                                           # Enable basic model offloading to CPU to reduce GPU memory usage (recommended, requires ~23.7GB VRAM)
+    # --sequential_offload \                                    # Enable more aggressive sequential offloading (saves more memory but much slower, requires < 1GB VRAM)
     # --disable_gemini_prompt \                                 # Disable Gemini prompt enhancement, not recommended unless you have a very detailed prompt
 ```
+For <24GB GPU memory, consider using the `--model_offload` or `--sequential_offload` option.
 
 ## Training
 TBD
@@ -106,3 +113,4 @@ Please cite our paper:
     year={2025}
 }       
 ```
+
