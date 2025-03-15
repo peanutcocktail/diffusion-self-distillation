@@ -42,7 +42,8 @@ pipe.load_lora_weights(
     weight_name="pytorch_lora_weights.safetensors",
 #    use_auth_token=os.getenv("HF_TOKEN"),
 )
-pipe.to(device, dtype=dtype)
+pipe.enable_model_cpu_offload()
+#pipe.to(device, dtype=dtype)
 
 def generate_image(
     image: Image.Image,
