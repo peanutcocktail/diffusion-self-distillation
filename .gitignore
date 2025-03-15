@@ -42,13 +42,13 @@ outputs/
 results/
 samples/
 logs/
-*.png
-*.jpg
-*.jpeg
-*.webp
-*.gif
-*.mp4
-*.avi
+#*.png
+#*.jpg
+#*.jpeg
+#*.webp
+#*.gif
+#*.mp4
+#*.avi
 
 # Data files
 data/
